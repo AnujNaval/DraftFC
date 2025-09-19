@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './HomePage.css';
 
-function HomePage() {
+function HomePage({ onStartGame }) {
   const [playerCount, setPlayerCount] = useState(2);
   
   const incrementPlayers = () => {
-    if (playerCount < 22) {
+    if (playerCount < 20) {
       setPlayerCount(prev => prev + 1);
     }
   };
@@ -17,8 +17,7 @@ function HomePage() {
   };
   
   const startGame = () => {
-    console.log(`Starting game with ${playerCount} players`);
-    // TODO: Add navigation to game screen
+    onStartGame?.(playerCount);
   };
 
   return (
