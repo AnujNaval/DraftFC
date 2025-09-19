@@ -1,0 +1,185 @@
+ /* HomePage Styles */
+.homepage {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.game-setup {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.player-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.player-selection label {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+}
+
+.player-count-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.count-btn {
+  background: linear-gradient(45deg, #4CAF50, #45a049);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count-btn:hover {
+  background: linear-gradient(45deg, #45a049, #4CAF50);
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.count-btn:active {
+  transform: scale(0.95);
+}
+
+.count-btn:disabled {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.player-count {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FFD700;
+  min-width: 60px;
+  text-align: center;
+}
+
+.start-btn {
+  background: linear-gradient(45deg, #FF6B35, #F7931E);
+  border: none;
+  color: white;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+.start-btn:hover {
+  background: linear-gradient(45deg, #F7931E, #FF6B35);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+}
+
+.start-btn:active {
+  transform: translateY(0);
+}
+
+/* Football decorative elements */
+.homepage::before {
+  content: '⚽';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  font-size: 3rem;
+  opacity: 0.3;
+  animation: bounce 2s infinite;
+}
+
+.homepage::after {
+  content: '🏆';
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  font-size: 3rem;
+  opacity: 0.3;
+  animation: bounce 2s infinite 1s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .homepage {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .logo {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .player-count-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .start-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+  }
+}
