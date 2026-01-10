@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Erling Haaland",
+    "basePrice": 25.0,
+    "imagePath": "/st/erling_haaland.png"
+  },
+  {
+    "id": 2,
+    "name": "Kylian Mbappe",
+    "basePrice": 30.0,
+    "imagePath": "/st/kylian_mbappe.png"
+  },
+  {
+    "id": 3,
+    "name": "Harry Kane",
+    "basePrice": 21.0,
+    "imagePath": "/st/harry_kane.png"
+  },
+  {
+    "id": 4,
+    "name": "Robert Lewandowski",
+    "basePrice": 19.0,
+    "imagePath": "/st/robert_lewandowski.png"
+  }
+]

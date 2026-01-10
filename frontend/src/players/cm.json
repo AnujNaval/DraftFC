@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Kevin De Bruyne",
+    "basePrice": 22.0,
+    "imagePath": "/cm/kevin_de_bruyne.png"
+  },
+  {
+    "id": 2,
+    "name": "Luka Modric",
+    "basePrice": 18.0,
+    "imagePath": "/cm/luka_modric.png"
+  },
+  {
+    "id": 3,
+    "name": "Jude Bellingham",
+    "basePrice": 28.0,
+    "imagePath": "/cm/jude_bellingham.png"
+  }
+]

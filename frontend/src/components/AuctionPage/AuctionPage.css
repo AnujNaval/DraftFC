@@ -1,0 +1,524 @@
+/* AuctionPage Styles */
+.auction-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 2rem;
+}
+
+.auction-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auction-title {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.auction-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.auction-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* --- Left Side - Wheel Section --- */
+.wheel-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.wheel-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wheel-pointer {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: #FFD700;
+  z-index: 10;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Makes it a circle */
+  position: relative;
+  transition: transform 4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.3),
+              inset 0 0 20px rgba(0, 0, 0, 0.3);
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  /* Background conic-gradient is applied via inline style in JSX */
+}
+
+/* Updated Segment Styling: Invisible anchors for text */
+.wheel-segment {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px; /* Defines the "center line" of the slice */
+  height: 50%; /* Reaches from top to center */
+  transform-origin: bottom center; /* Rotates around the wheel center */
+  display: flex;
+  justify-content: center; /* Centers text horizontally relative to the line */
+}
+
+.segment-content {
+  position: absolute;
+  top: 30px; /* Distance from the outer edge */
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  width: 150px; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.segment-name {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.segment-full-name {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+.wheel-center {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3),
+              inset 0 2px 8px rgba(255, 255, 255, 0.3);
+  border: 4px solid white;
+  z-index: 5;
+}
+
+.wheel-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.spin-btn {
+  background: linear-gradient(45deg, #4CAF50, #45a049);
+  border: none;
+  color: white;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+}
+
+.spin-btn:hover:not(:disabled) {
+  background: linear-gradient(45deg, #45a049, #4CAF50);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(76, 175, 80, 0.4);
+}
+
+.spin-btn:disabled {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.reset-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.selected-position {
+  text-align: center;
+  color: white;
+}
+
+.selected-position h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.position-badge {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Right Side - Player Section (Compact Version) --- */
+.player-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-card-container {
+  width: 100%;
+  max-width: 450px; /* Reduced max-width */
+}
+
+.player-section-title {
+  text-align: center;
+  font-size: 1.8rem; /* Reduced font size */
+  color: white;
+  margin-bottom: 1rem; /* Reduced margin */
+  background: linear-gradient(45deg, #FF6B35, #F7931E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.player-card-display {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 1.5rem; /* Reduced padding */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.fifa-card-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem; /* Reduced margin */
+}
+
+.fifa-card-image img {
+  max-width: 100%;
+  max-height: 280px; /* Drastically reduced from 450px */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  object-fit: contain;
+}
+
+.player-info-simple {
+  text-align: center;
+}
+
+.player-name-large {
+  font-size: 2rem; /* Reduced from 2.5rem */
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+}
+
+.base-price-large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.2));
+  padding: 1rem; /* Reduced padding */
+  border-radius: 15px;
+  border: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+.price-label {
+  font-size: 0.9rem; /* Reduced size */
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.price-value {
+  font-size: 2.2rem; /* Reduced from 3rem */
+  font-weight: bold;
+  color: #FFD700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.auction-actions {
+  margin-top: 1.5rem; /* Reduced margin */
+}
+
+.start-bidding-btn {
+  width: 100%;
+  background: linear-gradient(45deg, #FF6B35, #F7931E);
+  border: none;
+  color: white;
+  padding: 1rem 2rem; /* Reduced padding */
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+.start-bidding-btn:hover {
+  background: linear-gradient(45deg, #F7931E, #FF6B35);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+}
+
+/* Select Player State */
+.select-player-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px; /* Reduced from 500px */
+  color: white;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.select-icon {
+  font-size: 4rem; /* Reduced from 6rem */
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.select-text {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.select-text strong {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.select-player-btn {
+  background: linear-gradient(45deg, #9C27B0, #7B1FA2);
+  border: none;
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 25px rgba(156, 39, 176, 0.3);
+}
+
+.select-player-btn:hover:not(:disabled) {
+  background: linear-gradient(45deg, #7B1FA2, #9C27B0);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(156, 39, 176, 0.4);
+}
+
+.select-player-btn:disabled {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.waiting-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px; /* Reduced from 500px */
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.waiting-icon {
+  font-size: 4rem; /* Reduced from 5rem */
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+.waiting-state p {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.auction-footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.back-to-home-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-to-home-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .auction-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .wheel-container {
+    width: 400px;
+    height: 400px;
+  }
+
+  .segment-name {
+    font-size: 1.2rem;
+  }
+
+  .segment-full-name {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .auction-page {
+    padding: 1rem;
+  }
+
+  .auction-title {
+    font-size: 2rem;
+  }
+
+  .auction-subtitle {
+    font-size: 1rem;
+  }
+
+  .wheel-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .segment-name {
+    font-size: 1rem;
+  }
+
+  .segment-full-name {
+    font-size: 0.5rem;
+  }
+
+  .wheel-center {
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  /* Compact responsive card */
+  .player-card-display {
+    padding: 1rem;
+  }
+
+  .fifa-card-image img {
+    max-height: 220px; /* Even smaller for mobile */
+  }
+
+  .player-name-large {
+    font-size: 1.8rem;
+  }
+
+  .price-value {
+    font-size: 2rem;
+  }
+
+  .start-bidding-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .select-player-state {
+    padding: 1.5rem;
+    min-height: 280px; /* Reduced for mobile */
+  }
+
+  .select-icon {
+    font-size: 3rem;
+  }
+
+  .select-text {
+    font-size: 1rem;
+  }
+}

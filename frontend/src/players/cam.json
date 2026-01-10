@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Bruno Fernandes",
+    "basePrice": 18.5,
+    "imagePath": "/cam/bruno_fernandes.png"
+  },
+  {
+    "id": 2,
+    "name": "Martin Odegaard",
+    "basePrice": 17.0,
+    "imagePath": "/cam/martin_odegaard.png"
+  },
+  {
+    "id": 3,
+    "name": "Phil Foden",
+    "basePrice": 19.0,
+    "imagePath": "/cam/phil_foden.png"
+  }
+]

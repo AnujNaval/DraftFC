@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Trent Alexander-Arnold",
+    "basePrice": 14.0,
+    "imagePath": "/rb/trent_alexander_arnold.png"
+  },
+  {
+    "id": 2,
+    "name": "Kyle Walker",
+    "basePrice": 12.0,
+    "imagePath": "/rb/kyle_walker.png"
+  },
+  {
+    "id": 3,
+    "name": "Reece James",
+    "basePrice": 13.5,
+    "imagePath": "/rb/reece_james.png"
+  }
+]

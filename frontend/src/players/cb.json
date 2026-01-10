@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Virgil van Dijk",
+    "basePrice": 18.0,
+    "imagePath": "/cb/virgil_van_dijk.png"
+  },
+  {
+    "id": 2,
+    "name": "Ruben Dias",
+    "basePrice": 16.5,
+    "imagePath": "/cb/ruben_dias.png"
+  },
+  {
+    "id": 3,
+    "name": "Antonio Rudiger",
+    "basePrice": 15.0,
+    "imagePath": "/cb/antonio_rudiger.png"
+  }
+]

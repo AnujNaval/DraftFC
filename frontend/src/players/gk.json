@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Gianluigi Donnarumma",
+    "basePrice": 80.0,
+    "imagePath": "/gk/donnarumma.webp"
+  },
+  {
+    "id": 2,
+    "name": "Alisson Becker",
+    "basePrice": 80.0,
+    "imagePath": "/gk/alisson.webp"
+  },
+  {
+    "id": 3,
+    "name": "Thibaut Courtois",
+    "basePrice": 80.0,
+    "imagePath": "/gk/courtois.webp"
+  },
+  {
+    "id": 4,
+    "name": "Jan Oblak",
+    "basePrice": 80.0,
+    "imagePath": "/gk/oblak.webp"
+  },
+  {
+    "id": 5,
+    "name": "Yann Sommer",
+    "basePrice": 80.0,
+    "imagePath": "/gk/sommer.webp"
+  },
+  {
+    "id": 6,
+    "name": "Mike Maignan",
+    "basePrice": 65.0,
+    "imagePath": "/gk/maignan.webp"
+  },
+  {
+    "id": 7,
+    "name": "David Raya",
+    "basePrice": 65.0,
+    "imagePath": "/gk/raya.webp"
+  },
+  {
+    "id": 8,
+    "name": "Marc-André ter Stegen",
+    "basePrice": 65.0,
+    "imagePath": "/gk/terstegen.webp"
+  },
+  {
+    "id": 9,
+    "name": "Gregor Kobel",
+    "basePrice": 65.0,
+    "imagePath": "/gk/kobel.webp"
+  },
+  {
+    "id": 10,
+    "name": "Ederson Moraes",
+    "basePrice": 65.0,
+    "imagePath": "/gk/ederson.webp"
+  },
+  {
+    "id": 11,
+    "name": "Emiliano Martínez",
+    "basePrice": 50.0,
+    "imagePath": "/gk/martinez.webp"
+  },
+  {
+    "id": 12,
+    "name": "Unai Simón",
+    "basePrice": 50.0,
+    "imagePath": "/gk/simon.webp"
+  },
+  {
+    "id": 13,
+    "name": "Péter Gulácsi",
+    "basePrice": 50.0,
+    "imagePath": "/gk/gulacsi.webp"
+  },
+  {
+    "id": 14,
+    "name": "David de Gea",
+    "basePrice": 50.0,
+    "imagePath": "/gk/degea.webp"
+  },
+  {
+    "id": 15,
+    "name": "Jordan Pickford",
+    "basePrice": 50.0,
+    "imagePath": "/gk/pickford.webp"
+  },
+  {
+    "id": 16,
+    "name": "Manuel Neuer",
+    "basePrice": 35.0,
+    "imagePath": "/gk/neuer.webp"
+  },
+  {
+    "id": 17,
+    "name": "Wojciech Szczęsny",
+    "basePrice": 35.0,
+    "imagePath": "/gk/szczesny.webp"
+  },
+  {
+    "id": 18,
+    "name": "Diogo Costa",
+    "basePrice": 35.0,
+    "imagePath": "/gk/costa.webp"
+  },
+  {
+    "id": 19,
+    "name": "Giorgi Mamardashvili",
+    "basePrice": 35.0,
+    "imagePath": "/gk/mamardashvili.webp"
+  },
+  {
+    "id": 20,
+    "name": "Marco Carnesecchi",
+    "basePrice": 35.0,
+    "imagePath": "/gk/carnesecchi.webp"
+  },
+  {
+    "id": 21,
+    "name": "Joan García",
+    "basePrice": 20.0,
+    "imagePath": "/gk/garcia.webp"
+  },
+  {
+    "id": 22,
+    "name": "Álex Remiro",
+    "basePrice": 20.0,
+    "imagePath": "/gk/remiro.webp"
+  },
+  {
+    "id": 23,
+    "name": "Lucas Chevalier",
+    "basePrice": 20.0,
+    "imagePath": "/gk/chevalier.webp"
+  },
+  {
+    "id": 24,
+    "name": "Oliver Baumann",
+    "basePrice": 20.0,
+    "imagePath": "/gk/baumann.webp"
+  },
+  {
+    "id": 25,
+    "name": "Matz Sels",
+    "basePrice": 20.0,
+    "imagePath": "/gk/sels.webp"
+  },
+  {
+    "id": 26,
+    "name": "Koen Casteels",
+    "basePrice": 10.0,
+    "imagePath": "/gk/casteels.webp"
+  },
+  {
+    "id": 27,
+    "name": "Nick Pope",
+    "basePrice": 10.0,
+    "imagePath": "/gk/pope.webp"
+  },
+  {
+    "id": 28,
+    "name": "Yassine Bounou",
+    "basePrice": 10.0,
+    "imagePath": "/gk/bounou.webp"
+  },
+  {
+    "id": 29,
+    "name": "André Onana",
+    "basePrice": 10.0,
+    "imagePath": "/gk/onana.webp"
+  },
+  {
+    "id": 30,
+    "name": "Bernd Leno",
+    "basePrice": 10.0,
+    "imagePath": "/gk/leno.webp"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Andrew Robertson",
+    "basePrice": 13.5,
+    "imagePath": "/lb/andrew_robertson.png"
+  },
+  {
+    "id": 2,
+    "name": "Alphonso Davies",
+    "basePrice": 15.0,
+    "imagePath": "/lb/alphonso_davies.png"
+  },
+  {
+    "id": 3,
+    "name": "Joao Cancelo",
+    "basePrice": 14.0,
+    "imagePath": "/lb/joao_cancelo.png"
+  }
+]

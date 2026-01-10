@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import HomePage from './components/HomePage/HomePage';
 import ClubSelection from './components/ClubSelection/ClubSelection';
+import AuctionPage from './components/AuctionPage/AuctionPage';
 import { PlayerProvider } from './contexts/PlayerContext';
 import './App.css';
 
@@ -21,8 +22,7 @@ function App() {
 
   const handleClubSelectionComplete = (selectedClubs) => {
     console.log('All clubs selected:', selectedClubs);
-    // TODO: Navigate to draft screen
-    // setCurrentScreen('draft');
+    setCurrentScreen('auction');
   };
 
   return (
@@ -37,6 +37,9 @@ function App() {
             onBack={handleBackToHome}
             onComplete={handleClubSelectionComplete}
           />
+        )}
+        {currentScreen === 'auction' && (
+          <AuctionPage onBack={handleBackToHome} />
         )}
       </div>
     </PlayerProvider>

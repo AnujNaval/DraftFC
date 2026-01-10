@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Vinicius Jr",
+    "basePrice": 24.0,
+    "imagePath": "/lw/vinicius_jr.png"
+  },
+  {
+    "id": 2,
+    "name": "Leroy Sane",
+    "basePrice": 16.0,
+    "imagePath": "/lw/leroy_sane.png"
+  },
+  {
+    "id": 3,
+    "name": "Rafael Leao",
+    "basePrice": 18.5,
+    "imagePath": "/lw/rafael_leao.png"
+  }
+]

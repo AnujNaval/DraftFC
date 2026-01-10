@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Mohamed Salah",
+    "basePrice": 20.0,
+    "imagePath": "/rw/mohamed_salah.png"
+  },
+  {
+    "id": 2,
+    "name": "Bukayo Saka",
+    "basePrice": 19.0,
+    "imagePath": "/rw/bukayo_saka.png"
+  },
+  {
+    "id": 3,
+    "name": "Rodrygo",
+    "basePrice": 17.0,
+    "imagePath": "/rw/rodrygo.png"
+  }
+]
