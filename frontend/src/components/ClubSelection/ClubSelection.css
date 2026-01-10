@@ -239,3 +239,81 @@
     font-size: 2rem;
   }
 }
+
+/* Name Input Section */
+.name-input-section {
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.name-label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.8rem;
+}
+
+.name-input {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.name-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.name-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #FFD700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.name-error {
+  color: #FF4444;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.name-error::before {
+  content: '⚠';
+  font-size: 1.1rem;
+}
+
+/* Update for next button to handle disabled state better */
+.next-btn:disabled {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .name-input-section {
+    padding: 1rem;
+  }
+  
+  .name-label {
+    font-size: 1rem;
+  }
+  
+  .name-input {
+    padding: 0.6rem 1rem;
+  }
+}

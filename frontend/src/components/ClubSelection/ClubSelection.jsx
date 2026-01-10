@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { usePlayerContext } from "../../App";
 import "./ClubSelection.css";
 
 const CLUBS = [
@@ -25,9 +26,12 @@ const CLUBS = [
 ];
 
 function ClubSelection({ totalPlayers = 2, onBack, onComplete }) {
+  const { updatePlayer, getPlayer, players } = usePlayerContext();
   const [currentPlayer, setCurrentPlayer] = useState(1);
   const [selectedClubs, setSelectedClubs] = useState({});
   const [currentSelection, setCurrentSelection] = useState(null);
+  const [playerName, setPlayerName] = useState('');
+  const [nameError, setNameError] = useState('');
 
   const handleClubSelect = (clubId) => {
     // Check if club is already taken by another player
@@ -38,20 +42,53 @@ function ClubSelection({ totalPlayers = 2, onBack, onComplete }) {
   };
 
   const handleNext = () => {
-    if (currentSelection) {
-      const newSelectedClubs = {
-        ...selectedClubs,
-        [currentPlayer]: currentSelection,
-      };
-      setSelectedClubs(newSelectedClubs);
+    const trimmedName = playerName.trim();
+    
+    // Validate name
+    if (!trimmedName) {
+      setNameError('Please enter your name');
+      return;
+    }
+    
+    // Check if name is already taken by another player
+    const isNameTaken = Object.entries(players).some(
+      ([playerNum, data]) => 
+        data.name?.toLowerCase() === trimmedName.toLowerCase() && 
+        parseInt(playerNum) !== currentPlayer
+    );
+    
+    if (isNameTaken) {
+      setNameError('This name is already taken. Please choose a different name.');
+      return;
+    }
+    
+    // Validate club selection
+    if (!currentSelection) {
+      setNameError('Please select a club');
+      return;
+    }
+    
+    // Save player data globally
+    updatePlayer(currentPlayer, {
+      name: trimmedName,
+      clubId: currentSelection,
+      clubName: CLUBS.find(c => c.id === currentSelection)?.name
+    });
+    
+    const newSelectedClubs = {
+      ...selectedClubs,
+      [currentPlayer]: currentSelection,
+    };
+    setSelectedClubs(newSelectedClubs);
 
-      if (currentPlayer < totalPlayers) {
-        setCurrentPlayer(currentPlayer + 1);
-        setCurrentSelection(null);
-      } else {
-        // All players have selected their clubs
-        onComplete?.(newSelectedClubs);
-      }
+    if (currentPlayer < totalPlayers) {
+      setCurrentPlayer(currentPlayer + 1);
+      setCurrentSelection(null);
+      setPlayerName('');
+      setNameError('');
+    } else {
+      // All players have selected their clubs
+      onComplete?.(newSelectedClubs);
     }
   };
 
@@ -61,7 +98,12 @@ function ClubSelection({ totalPlayers = 2, onBack, onComplete }) {
       delete newSelectedClubs[currentPlayer - 1];
       setSelectedClubs(newSelectedClubs);
       setCurrentPlayer(currentPlayer - 1);
+      
+      // Restore previous player's data
+      const prevPlayer = getPlayer(currentPlayer - 1);
+      setPlayerName(prevPlayer.name || '');
       setCurrentSelection(selectedClubs[currentPlayer - 1] || null);
+      setNameError('');
     } else {
       onBack?.();
     }
@@ -77,7 +119,12 @@ function ClubSelection({ totalPlayers = 2, onBack, onComplete }) {
     const entry = Object.entries(selectedClubs).find(
       ([player, club]) => club === clubId && parseInt(player) !== currentPlayer
     );
-    return entry ? parseInt(entry[0]) : null;
+    if (entry) {
+      const playerNum = parseInt(entry[0]);
+      const player = getPlayer(playerNum);
+      return player.name || `Player ${playerNum}`;
+    }
+    return null;
   };
 
   const progressPercentage = ((currentPlayer - 1) / totalPlayers) * 100;
@@ -106,6 +153,26 @@ function ClubSelection({ totalPlayers = 2, onBack, onComplete }) {
         </span>
       </div>
 
+      {/* Name Input Section */}
+      <div className="name-input-section">
+        <label htmlFor="player-name" className="name-label">
+          Enter Your Name
+        </label>
+        <input
+          id="player-name"
+          type="text"
+          value={playerName}
+          onChange={(e) => {
+            setPlayerName(e.target.value);
+            setNameError('');
+          }}
+          placeholder="Your name"
+          className="name-input"
+          maxLength={30}
+        />
+        {nameError && <p className="name-error">{nameError}</p>}
+      </div>
+
       <div className="clubs-grid">
         {CLUBS.map((club) => {
           const isTaken = isClubTaken(club.id);
@@ -126,7 +193,7 @@ function ClubSelection({ totalPlayers = 2, onBack, onComplete }) {
 
               <div className="club-name">{club.name}</div>
               {isTaken && (
-                <div className="taken-badge">Player {takenByPlayer}</div>
+                <div className="taken-badge">{takenByPlayer}</div>
               )}
             </div>
           );
@@ -141,7 +208,7 @@ function ClubSelection({ totalPlayers = 2, onBack, onComplete }) {
         <button
           className="next-btn"
           onClick={handleNext}
-          disabled={!currentSelection}
+          disabled={!currentSelection || !playerName.trim()}
         >
           {currentPlayer === totalPlayers ? "Start Game" : "Next Player"}
         </button>

@@ -41,7 +41,7 @@ function HomePage({ onStartGame }) {
             <button 
               className="count-btn"
               onClick={incrementPlayers}
-              disabled={playerCount >= 22}
+              disabled={playerCount >= 20}
               aria-label="Increase player count"
             >
               +
