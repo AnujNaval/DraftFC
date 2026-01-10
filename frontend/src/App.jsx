@@ -1,46 +1,8 @@
-import { useState, createContext, useContext } from 'react';
+import { useState } from 'react';
 import HomePage from './components/HomePage/HomePage';
 import ClubSelection from './components/ClubSelection/ClubSelection';
+import { PlayerProvider } from './contexts/PlayerContext';
 import './App.css';
-
-// Create a context for global player data
-const PlayerContext = createContext();
-
-// Custom hook to access player data from anywhere
-export const usePlayerContext = () => {
-  const context = useContext(PlayerContext);
-  if (!context) {
-    throw new Error('usePlayerContext must be used within PlayerProvider');
-  }
-  return context;
-};
-
-// Player Provider Component
-function PlayerProvider({ children }) {
-  const [players, setPlayers] = useState({});
-  
-  const updatePlayer = (playerNumber, data) => {
-    setPlayers(prev => ({
-      ...prev,
-      [playerNumber]: { ...prev[playerNumber], ...data }
-    }));
-  };
-  
-  const getPlayer = (playerNumber) => players[playerNumber] || {};
-  
-  const getAllPlayers = () => players;
-  
-  const resetPlayers = () => setPlayers({});
-  
-  return (
-    <PlayerContext.Provider value={{ players, updatePlayer, getPlayer, getAllPlayers, resetPlayers }}>
-      {children}
-    </PlayerContext.Provider>
-  );
-}
-
-// Export the context and hook for use in other components
-export { PlayerContext, PlayerProvider };
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState('home');

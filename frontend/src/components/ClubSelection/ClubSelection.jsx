@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { usePlayerContext } from "../../App";
+import { usePlayerContext } from "../../contexts/PlayerContext";
 import "./ClubSelection.css";
 
 const CLUBS = [
