@@ -286,15 +286,20 @@
 }
 
 .auction-actions {
-  margin-top: 1.5rem; /* Reduced margin */
+  margin-top: 1.5rem;
+  /* Add Flexbox to align buttons side-by-side */
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .start-bidding-btn {
-  width: 100%;
+  flex: 1;
+  width: auto; /* Remove fixed width if present */
   background: linear-gradient(45deg, #FF6B35, #F7931E);
   border: none;
   color: white;
-  padding: 1rem 2rem; /* Reduced padding */
+  padding: 1rem; /* Adjusted padding */
   font-size: 1.1rem;
   font-weight: bold;
   border-radius: 50px;
@@ -309,6 +314,32 @@
   background: linear-gradient(45deg, #F7931E, #FF6B35);
   transform: translateY(-2px);
   box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+}
+
+.change-player-btn {
+  flex: 1; /* Takes up equal space as start button */
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.change-player-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.change-player-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* Select Player State */

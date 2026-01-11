@@ -59,10 +59,23 @@ function AuctionPage({ onBack }) {
     setIsLoadingPlayer(true);
 
     try {
+      // Dynamic import based on position name
       const positionFile = await import(`../../players/${selectedPosition.name.toLowerCase()}.json`);
       const players = positionFile.default;
-      const randomIndex = Math.floor(Math.random() * players.length);
-      setCurrentPlayer(players[randomIndex]);
+      
+      // Select random player
+      let randomIndex = Math.floor(Math.random() * players.length);
+      let newPlayer = players[randomIndex];
+
+      // Optional: Prevent selecting the exact same player immediately again
+      if (currentPlayer && players.length > 1) {
+        while (newPlayer.name === currentPlayer.name) {
+          randomIndex = Math.floor(Math.random() * players.length);
+          newPlayer = players[randomIndex];
+        }
+      }
+
+      setCurrentPlayer(newPlayer);
     } catch (error) {
       console.error('Error loading player data:', error);
       alert(`No players found for position ${selectedPosition.name}`);
@@ -93,11 +106,10 @@ function AuctionPage({ onBack }) {
               className="wheel"
               style={{ 
                 transform: `rotate(${rotation}deg)`,
-                background: gradientString // Applied here
+                background: gradientString 
               }}
             >
               {POSITIONS.map((position, index) => {
-                // Rotate the text anchor to the CENTER of the slice
                 const textRotation = (segmentAngle * index) + (segmentAngle / 2);
                 
                 return (
@@ -106,7 +118,6 @@ function AuctionPage({ onBack }) {
                     className="wheel-segment"
                     style={{
                       transform: `rotate(${textRotation}deg)`,
-                      // Background color is now handled by the parent gradient
                     }}
                   >
                     <div className="segment-content">
@@ -142,7 +153,7 @@ function AuctionPage({ onBack }) {
           )}
         </div>
 
-        {/* Right Side - Player Card (Unchanged) */}
+        {/* Right Side - Player Card */}
         <div className="player-section">
           {currentPlayer ? (
             <div className="player-card-container">
@@ -163,9 +174,20 @@ function AuctionPage({ onBack }) {
                   </div>
                 </div>
               </div>
+              
               <div className="auction-actions">
-                <button className="start-bidding-btn">Start Bidding</button>
+                <button className="start-bidding-btn">
+                  Start Bidding
+                </button>
+                <button 
+                  className="change-player-btn"
+                  onClick={selectRandomPlayer}
+                  disabled={isLoadingPlayer}
+                >
+                  {isLoadingPlayer ? '...' : 'Change Player'}
+                </button>
               </div>
+
             </div>
           ) : selectedPosition && !isSpinning ? (
             <div className="select-player-state">
