@@ -1,20 +1,182 @@
 [
   {
     "id": 1,
-    "name": "Trent Alexander-Arnold",
-    "basePrice": 14.0,
-    "imagePath": "/rb/trent_alexander_arnold.png"
+    "name": "Achraf Hakimi",
+    "basePrice": 85.0,
+    "imagePath": "/rb/hakimi.webp"
   },
   {
     "id": 2,
-    "name": "Kyle Walker",
-    "basePrice": 12.0,
-    "imagePath": "/rb/kyle_walker.png"
+    "name": "Jules Koundé",
+    "basePrice": 85.0,
+    "imagePath": "/rb/kounde.webp"
   },
   {
     "id": 3,
+    "name": "Trent Alexander-Arnold",
+    "basePrice": 85.0,
+    "imagePath": "/rb/trent.webp"
+  },
+  {
+    "id": 4,
+    "name": "Dani Carvajal",
+    "basePrice": 85.0,
+    "imagePath": "/rb/carvajal.webp"
+  },
+  {
+    "id": 5,
+    "name": "Marcos Llorente",
+    "basePrice": 85.0,
+    "imagePath": "/rb/llorente.webp"
+  },
+  {
+    "id": 6,
+    "name": "João Cancelo",
+    "basePrice": 70.0,
+    "imagePath": "/rb/cancelo.webp"
+  },
+  {
+    "id": 7,
+    "name": "Denzel Dumfries",
+    "basePrice": 70.0,
+    "imagePath": "/rb/dumfries.webp"
+  },
+  {
+    "id": 8,
+    "name": "Jeremie Frimpong",
+    "basePrice": 70.0,
+    "imagePath": "/rb/frimpong.webp"
+  },
+  {
+    "id": 9,
+    "name": "Ben White",
+    "basePrice": 70.0,
+    "imagePath": "/rb/white.webp"
+  },
+  {
+    "id": 10,
+    "name": "Giovanni Di Lorenzo",
+    "basePrice": 70.0,
+    "imagePath": "/rb/dilorenzo.webp"
+  },
+  {
+    "id": 11,
+    "name": "Pedro Porro",
+    "basePrice": 50.0,
+    "imagePath": "/rb/porro.webp"
+  },
+  {
+    "id": 12,
+    "name": "Konrad Laimer",
+    "basePrice": 50.0,
+    "imagePath": "/rb/laimer.webp"
+  },
+  {
+    "id": 13,
+    "name": "Jurriën Timber",
+    "basePrice": 50.0,
+    "imagePath": "/rb/timber.webp"
+  },
+  {
+    "id": 14,
+    "name": "Diogo Dalot",
+    "basePrice": 50.0,
+    "imagePath": "/rb/dalot.webp"
+  },
+  {
+    "id": 15,
     "name": "Reece James",
-    "basePrice": 13.5,
-    "imagePath": "/rb/reece_james.png"
+    "basePrice": 50.0,
+    "imagePath": "/rb/james.webp"
+  },
+  {
+    "id": 16,
+    "name": "Matteo Darmian",
+    "basePrice": 35.0,
+    "imagePath": "/rb/darmian.webp"
+  },
+  {
+    "id": 17,
+    "name": "Daniel Muñoz",
+    "basePrice": 35.0,
+    "imagePath": "/rb/munoz.webp"
+  },
+  {
+    "id": 18,
+    "name": "Kieran Trippier",
+    "basePrice": 35.0,
+    "imagePath": "/rb/trippier.webp"
+  },
+  {
+    "id": 19,
+    "name": "Noussair Mazraoui",
+    "basePrice": 35.0,
+    "imagePath": "/rb/mazraoui.webp"
+  },
+  {
+    "id": 20,
+    "name": "Jonathan Clauss",
+    "basePrice": 35.0,
+    "imagePath": "/rb/clauss.webp"
+  },
+  {
+    "id": 21,
+    "name": "Oscar Mingueza",
+    "basePrice": 20.0,
+    "imagePath": "/rb/mingueza.webp"
+  },
+  {
+    "id": 22,
+    "name": "Ola Aina",
+    "basePrice": 20.0,
+    "imagePath": "/rb/ola.webp"
+  },
+  {
+    "id": 23,
+    "name": "Tino Livramento",
+    "basePrice": 20.0,
+    "imagePath": "/rb/tino.webp"
+  },
+  {
+    "id": 24,
+    "name": "Kyle Walker",
+    "basePrice": 20.0,
+    "imagePath": "/rb/walker.webp"
+  },
+  {
+    "id": 25,
+    "name": "Nahuel Molina",
+    "basePrice": 20.0,
+    "imagePath": "/rb/molina.webp"
+  },
+  {
+    "id": 26,
+    "name": "Sergiño Dest",
+    "basePrice": 10.0,
+    "imagePath": "/rb/dest.webp"
+  },
+  {
+    "id": 27,
+    "name": "Julian Ryerson",
+    "basePrice": 10.0,
+    "imagePath": "/rb/ryerson.webp"
+  },
+  {
+    "id": 28,
+    "name": "Ferdi Kadioğlu",
+    "basePrice": 10.0,
+    "imagePath": "/rb/kadioglu.webp"
+  },
+  {
+    "id": 29,
+    "name": "Andrei Rațiu",
+    "basePrice": 10.0,
+    "imagePath": "/rb/ratiu.webp"
+  },
+  {
+    "id": 30,
+    "name": "Rodinei",
+    "basePrice": 10.0,
+    "imagePath": "/rb/rodinei.webp"
   }
 ]

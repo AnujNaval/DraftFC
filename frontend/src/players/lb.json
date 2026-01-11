@@ -1,20 +1,182 @@
 [
   {
     "id": 1,
-    "name": "Andrew Robertson",
-    "basePrice": 13.5,
-    "imagePath": "/lb/andrew_robertson.png"
+    "name": "Nuno Mendes",
+    "basePrice": 85.0,
+    "imagePath": "/lb/nunomendes.webp"
   },
   {
     "id": 2,
-    "name": "Alphonso Davies",
-    "basePrice": 15.0,
-    "imagePath": "/lb/alphonso_davies.png"
+    "name": "Federico Dimarco",
+    "basePrice": 85.0,
+    "imagePath": "/lb/dimarco.webp"
   },
   {
     "id": 3,
-    "name": "Joao Cancelo",
-    "basePrice": 14.0,
-    "imagePath": "/lb/joao_cancelo.png"
+    "name": "Theo Hernández",
+    "basePrice": 85.0,
+    "imagePath": "/lb/theo.webp"
+  },
+  {
+    "id": 4,
+    "name": "Alphonso Davies",
+    "basePrice": 85.0,
+    "imagePath": "/lb/davies.webp"
+  },
+  {
+    "id": 5,
+    "name": "Joško Gvardiol",
+    "basePrice": 70.0,
+    "imagePath": "/lb/gvardiol.webp"
+  },
+  {
+    "id": 6,
+    "name": "Marc Cucurella",
+    "basePrice": 85.0,
+    "imagePath": "/lb/cucurella.webp"
+  },
+  {
+    "id": 7,
+    "name": "Alejandro Grimaldo",
+    "basePrice": 70.0,
+    "imagePath": "/lb/grimaldo.webp"
+  },
+  {
+    "id": 8,
+    "name": "Alejandro Balde",
+    "basePrice": 70.0,
+    "imagePath": "/lb/balde.webp"
+  },
+  {
+    "id": 9,
+    "name": "Andrew Robertson",
+    "basePrice": 70.0,
+    "imagePath": "/lb/robertson.webp"
+  },
+  {
+    "id": 10,
+    "name": "Ferland Mendy",
+    "basePrice": 70.0,
+    "imagePath": "/lb/mendy.webp"
+  },
+  {
+    "id": 11,
+    "name": "David Raum",
+    "basePrice": 50.0,
+    "imagePath": "/lb/raum.webp"
+  },
+  {
+    "id": 12,
+    "name": "Milos Kerkez",
+    "basePrice": 50.0,
+    "imagePath": "/lb/kerkez.webp"
+  },
+  {
+    "id": 13,
+    "name": "Antonee Robinson",
+    "basePrice": 50.0,
+    "imagePath": "/lb/robinson.webp"
+  },
+  {
+    "id": 14,
+    "name": "Maximilian Mittelstädt",
+    "basePrice": 50.0,
+    "imagePath": "/lb/mittelstadt.webp"
+  },
+  {
+    "id": 15,
+    "name": "José Gayà",
+    "basePrice": 50.0,
+    "imagePath": "/lb/gaya.webp"
+  },
+  {
+    "id": 16,
+    "name": "Destiny Udogie",
+    "basePrice": 35.0,
+    "imagePath": "/lb/udogie.webp"
+  },
+  {
+    "id": 17,
+    "name": "Miguel Gutiérrez",
+    "basePrice": 35.0,
+    "imagePath": "/lb/gutierrez.webp"
+  },
+  {
+    "id": 18,
+    "name": "Raphaël Guerreiro",
+    "basePrice": 35.0,
+    "imagePath": "/lb/guerreiro.webp"
+  },
+  {
+    "id": 19,
+    "name": "Robin Gosens",
+    "basePrice": 35.0,
+    "imagePath": "/lb/gosens.webp"
+  },
+  {
+    "id": 20,
+    "name": "Álvaro Carreras",
+    "basePrice": 35.0,
+    "imagePath": "/lb/carreras.webp"
+  },
+  {
+    "id": 21,
+    "name": "Maxim De Cuyper",
+    "basePrice": 20.0,
+    "imagePath": "/lb/decuyper.webp"
+  },
+  {
+    "id": 22,
+    "name": "Rayan Aït-Nouri",
+    "basePrice": 20.0,
+    "imagePath": "/lb/aitnouri.webp"
+  },
+  {
+    "id": 23,
+    "name": "Andrea Cambiaso",
+    "basePrice": 20.0,
+    "imagePath": "/lb/cambiaso.webp"
+  },
+  {
+    "id": 24,
+    "name": "Yuri Berchiche",
+    "basePrice": 20.0,
+    "imagePath": "/lb/berchiche.webp"
+  },
+  {
+    "id": 25,
+    "name": "Oleksandr Zinchenko",
+    "basePrice": 20.0,
+    "imagePath": "/lb/zinchenko.webp"
+  },
+  {
+    "id": 26,
+    "name": "Jordi Alba",
+    "basePrice": 10.0,
+    "imagePath": "/lb/alba.webp"
+  },
+  {
+    "id": 27,
+    "name": "Marcos Acuña",
+    "basePrice": 10.0,
+    "imagePath": "/lb/acuna.webp"
+  },
+  {
+    "id": 28,
+    "name": "Tyrick Mitchell",
+    "basePrice": 10.0,
+    "imagePath": "/lb/mitchell.webp"
+  },
+  {
+    "id": 29,
+    "name": "Jorrel Hato",
+    "basePrice": 10.0,
+    "imagePath": "/lb/hato.webp"
+  },
+  {
+    "id": 30,
+    "name": "Leonardo Spinazzola",
+    "basePrice": 10.0,
+    "imagePath": "/lb/spinazzola.webp"
   }
 ]
